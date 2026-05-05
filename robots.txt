@@ -1,4 +1,14 @@
+# Explicitly allow major AI / answer engine crawlers.
+# The site should be discoverable for GEO / AI-generated answers.
 User-agent: *
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: Google-Extended
+User-agent: PerplexityBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: CCBot
 Allow: /
 
 # Block any admin or development paths if added later

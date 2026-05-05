@@ -13,7 +13,7 @@ img{max-width:100%;display:block}
 :root{
   --bg:#0c1220;--bg2:#0f1729;--bg3:#151d2e;--bg4:#1a2438;
   --b:rgba(91,155,213,.1);--b2:rgba(91,155,213,.18);--b3:rgba(91,155,213,.28);
-  --text:#f1f5f9;--muted:#94a3b8;--muted2:#64748b;--star:#f59e0b;
+  --text:#f1f5f9;--txt:var(--text);--muted:#94a3b8;--muted2:#64748b;--star:#f59e0b;
   --acc:#5b9bd5;--acc2:#4a6fa5;--glow:rgba(91,155,213,.12);--faint:rgba(91,155,213,.06);
   --r:10px;--r2:14px;--max:1080px;
   --serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',sans-serif;
@@ -129,6 +129,17 @@ nav{position:sticky;top:0;z-index:200;background:rgba(12,18,32,.92);backdrop-fil
 .lh{margin-bottom:48px}
 .lh h2{font-family:var(--serif);font-size:42px;letter-spacing:-.02em;margin-top:10px}
 .lh p{color:var(--muted);font-size:16px;max-width:500px;margin-top:10px;font-weight:300}
+
+/* Long-form explainer: one readable column (ops page, similar) */
+.section-longform{width:100%;max-width:640px;margin:0 auto}
+.section-longform .sh{text-align:left;margin-bottom:36px}
+.section-longform .sh h2{font-size:clamp(28px,4vw,40px);line-height:1.15;letter-spacing:-.02em;margin-top:10px}
+.section-longform .sh p{color:#a8b4c8;font-size:16px;line-height:1.8;font-weight:300;max-width:100%;margin:14px 0 0}
+.section-longform .body-prose p{color:#a8b4c8;font-size:16px;line-height:1.85;font-weight:300;margin:0 0 22px}
+.section-longform .body-prose p:last-child{margin-bottom:0}
+.section-longform .body-prose strong{color:var(--text);font-weight:600}
+.section-longform .body-prose a{color:var(--acc)}
+.section-longform .body-prose a:hover{text-decoration:underline}
 
 /* ── BUTTONS ── */
 .bprim{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;font-family:var(--sans);font-size:15px;font-weight:500;padding:14px 28px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:all .2s var(--ease);border:none;cursor:pointer;position:relative;overflow:hidden}
@@ -483,6 +494,7 @@ footer{background:var(--bg2);border-top:1px solid var(--b);padding:52px 0 32px;p
   .article-wrap{padding:56px 0 72px}
   .article-head h1{font-size:34px}
   .article-dek,.article-prose{font-size:16px}
+  .section-longform .sh h2{font-size:26px}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
